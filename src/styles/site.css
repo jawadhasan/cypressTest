@@ -1,0 +1,99 @@
+
+  #left {
+    height:100%;
+    position: absolute;
+    top: 60px;
+    bottom: 0px;
+    left: 0;
+    overflow-y: scroll;
+  }
+
+  #right {
+    background-color: #f1c40f;
+    position: absolute;
+    /* top: 60px;     */
+    right: 0;
+  }
+
+  
+body {
+    position: relative;
+    margin: 0;
+    padding-bottom: 6rem;
+    min-height: 100%;
+    /* font-family: "Helvetica Neue", Arial, sans-serif; */
+  }
+  
+footer{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 1rem;
+    color: white;
+    text-align: center;
+}
+
+
+/* above xs devices: e.g tablets and onwards  */
+@media (min-width: 768px) {
+    .cell {
+        min-height: 110px;
+        max-height: 110px;
+        float: left;
+    }
+  }
+
+
+/* VendingMachine Styles */
+
+
+.machine {
+    margin: 30px 0 0 -30px;
+}
+.cell {
+    /* min-height: 110px;
+    max-height: 110px;          */
+}
+.cell:hover {
+    outline: 1px solid red;
+    cursor: pointer;
+}
+.productInfo {
+    padding-left: 20px;
+}
+
+.coin:hover{
+    outline: 1px solid red;
+    cursor: pointer;
+    }
+.payButton {
+    width: 100px;
+    height: 60px;
+    margin-top: 20px;
+    font-size: 2em;
+    margin-left: 15px;
+}
+
+/* animation of products */
+.selected .image {
+    animation-name: rotate;
+    animation-duration: 2s;
+}
+
+.sold .image {
+    animation-name: drop;
+    animation-duration: 2s;
+}
+
+@keyframes rotate {
+    33% { transform: rotate(-15deg); }
+    66% { transform: rotate(15deg); }
+}
+
+@keyframes drop {
+    99% { transform: translateY(600px) rotate(120deg); }
+}
+
+
+/* End - VendingMachine Styles */
