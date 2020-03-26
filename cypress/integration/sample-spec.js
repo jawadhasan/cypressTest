@@ -1,13 +1,13 @@
-// describe and it come from Mocha
-// expect comes from Chai
 
 describe('My First Test', function() {
+
+        // beforeEach(function () {
+    //     cy.visit('/')
+    // })
     it('Does not do much!', function() {
       expect(true).to.equal(true)
     })
   })
-
-
 
   describe('visit app', function() {
     it('Successfully loads', function() {

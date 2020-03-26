@@ -1,11 +1,8 @@
 describe('The Home Page', function () {
-
-    // beforeEach(function () {
-    //     cy.visit('/')
-    // })
   
     it('tests navbar items', function() {
 
+        //open base url
         cy.visit('/')
 
         //finds the text
@@ -13,6 +10,8 @@ describe('The Home Page', function () {
 
         //verify the links
         cy.contains('Sights').click()
+        cy.screenshot('clicking-on-nav')
+
         cy.url().should('include', '#sights')
 
         cy.contains('Sports').click()
@@ -24,8 +23,12 @@ describe('The Home Page', function () {
         cy.contains('Contact Us').click()
         cy.url().should('include', '#contact-us')
 
+        //Enter UserName
         const username = 'Hitachi'
         cy.get('input[name=userName]').type(username).should('have.value', 'Hitachi')
+
+
+        //....and so on...
 
     })
   })
